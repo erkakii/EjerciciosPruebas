@@ -5,6 +5,6 @@ import retrofit2.http.Body
 import retrofit2.http.POST
 
 interface ServicioAPI {
-    @POST("usuarios")
+    @POST("users")
     fun crearUsuario(@Body usuario: Usuario): Call<Void>
 }

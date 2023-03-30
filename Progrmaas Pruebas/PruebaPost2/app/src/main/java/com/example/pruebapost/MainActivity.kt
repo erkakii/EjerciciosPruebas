@@ -20,17 +20,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://localhost:7150/api/")
+            .baseUrl("https://eticketsapi.azurewebsites.net/api/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
         val servicioAPI = retrofit.create(ServicioAPI::class.java)
         val usuario = Usuario(
-            idUsuario = 1,
             nombre = "Juan",
             email = "juan@gmail.com",
-            contrasenia = "contraseña123",
-            fechaRegistro = LocalDateTime.now()
+            contrasenia = "contraseña123"
         )
 
 
