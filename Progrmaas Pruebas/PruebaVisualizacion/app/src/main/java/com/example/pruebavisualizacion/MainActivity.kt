@@ -12,11 +12,14 @@ import com.example.pruebapostpdf.Pdfs
 import com.example.pruebapostpdf.ServicioAPI
 import com.github.barteksc.pdfviewer.PDFView
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.io.ByteArrayInputStream
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -45,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                 val pdf = Pdfs(
                     titulo = "Mercadona",
                     contenido = pdfBase64,
-                    emailUser = "elminikaki@gmail.com"
+                    emailUser = "elminikaki@gmail.com",
                 )
 
                 //ESTA ES LA OPCION DE INTENTAR ABRIRLO CON UNA APLICACION DE LECTURA DE PDF
@@ -62,6 +65,20 @@ class MainActivity : AppCompatActivity() {
                     .scrollHandle(DefaultScrollHandle(applicationContext))
                     .load()
 
+//                val base64EncodedPdf = pdfBase64 // cadena base64 que representa el PDF
+//                val pdfBytes = Base64.decode(base64EncodedPdf, Base64.DEFAULT)
+//
+//                val document = PDDocument.load(pdfBytes)
+//                val contentStripper = PDFTextStripper()
+//                val text = contentStripper.getText(document)
+
+//                val totalRegex = Regex("(?i)Total|Importe:\\s*([\\d,.]+)")
+//                val matchResult = totalRegex.find(text)
+//                val firstLine = text.lines().first()
+//                Log.d("MainActivity", firstLine)
+
+//                val totalValue = matchResult?.groupValues?.get(1) ?: "0"
+//                val total = totalValue.replace(",", ".").toDouble()
 
                 //Este metodo es para realizar la llamada al metodo post
                 servicioAPI.crearPdf(pdf).enqueue(object : Callback<Void> {

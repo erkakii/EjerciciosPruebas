@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import com.github.barteksc.pdfviewer.PDFView
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle
+import org.apache.pdfbox.pdmodel.PDDocument
+import org.apache.pdfbox.text.PDFTextStripper
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -55,7 +57,6 @@ class MainActivity : AppCompatActivity() {
                 pdfView = findViewById<PDFView>(R.id.pdfView)
 
 
-
                 // Decodifica la cadena Base64 a un ByteArray
                 val decodedBytes = android.util.Base64.decode(pdfBase64, android.util.Base64.DEFAULT)
 
@@ -65,6 +66,22 @@ class MainActivity : AppCompatActivity() {
                     .enableSwipe(true)
                     .scrollHandle(DefaultScrollHandle(applicationContext))
                     .load()
+
+
+//                val base64EncodedPdf = pdfBase64 // cadena base64 que representa el PDF
+//                val pdfBytes = Base64.getDecoder().decode(base64EncodedPdf)
+//
+//                val document = PDDocument.load(pdfBytes)
+//                val contentStripper = PDFTextStripper()
+//                val text = contentStripper.getText(document)
+
+//                val totalRegex = Regex("(?i)Total|Importe:\\s*([\\d,.]+)")
+//                val matchResult = totalRegex.find(text)
+//                val firstLine = text.lines().first()
+//                Toast.makeText(this@MainActivity, firstLine, Toast.LENGTH_SHORT).show()
+
+//                val totalValue = matchResult?.groupValues?.get(1) ?: "0"
+//                val total = totalValue.replace(",", ".").toDouble()
 
 
                 //Este metodo es para realizar la llamada al metodo post
