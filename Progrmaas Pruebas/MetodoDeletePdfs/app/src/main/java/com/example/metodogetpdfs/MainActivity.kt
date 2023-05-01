@@ -1,6 +1,7 @@
 package com.example.metodogetpdfs
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -58,9 +59,27 @@ class MainActivity : AppCompatActivity() {
                         intent.putExtra("pdfbase64", pdfItem.contenidoPDF)
                         startActivity(intent)
                     }, { pdfItem ->
-                        pdfs.remove(pdfItem)
+                        val builder = AlertDialog.Builder(this@MainActivity)
+                        builder.setMessage("¿Está seguro que desea eliminar el PDF?")
+                            .setCancelable(false)
+                            .setPositiveButton("Sí") { _, _ ->
+                                pdfs.remove(pdfItem)
+                                pdfAdapter.notifyDataSetChanged()
+                                lifecycleScope.launch {
+                                    try {
+                                        pdfApi.deletePdf(pdfItem.idPdf)
+                                        Toast.makeText(this@MainActivity, "PDF eliminado", Toast.LENGTH_LONG).show()
+                                    } catch (e: Exception) {
+                                        Toast.makeText(this@MainActivity, e.message, Toast.LENGTH_LONG).show()
+                                    }
+                                }
+                            }
+                            .setNegativeButton("No") { dialog, _ ->
+                                dialog.dismiss()
+                            }
+                        val alert = builder.create()
+                        alert.show()
                     })
-
                     pdfAdapter.notifyDataSetChanged()
                     recyclerView.adapter = pdfAdapter
                     recyclerView.layoutManager = LinearLayoutManager(applicationContext)
@@ -73,8 +92,26 @@ class MainActivity : AppCompatActivity() {
                     intent.putExtra("pdfbase64", pdfItem.contenidoPDF)
                     startActivity(intent)
                 },{ pdfItem ->
-                    pdfs.remove(pdfItem)
-                    pdfAdapter.notifyDataSetChanged()
+                    val builder = AlertDialog.Builder(this@MainActivity)
+                    builder.setMessage("¿Está seguro que desea eliminar el PDF?")
+                        .setCancelable(false)
+                        .setPositiveButton("Sí") { _, _ ->
+                            pdfs.remove(pdfItem)
+                            pdfAdapter.notifyDataSetChanged()
+                            lifecycleScope.launch {
+                                try {
+                                    pdfApi.deletePdf(pdfItem.idPdf)
+                                    Toast.makeText(this@MainActivity, "PDF eliminado", Toast.LENGTH_LONG).show()
+                                } catch (e: Exception) {
+                                    Toast.makeText(this@MainActivity, e.message, Toast.LENGTH_LONG).show()
+                                }
+                            }
+                        }
+                        .setNegativeButton("No") { dialog, _ ->
+                            dialog.dismiss()
+                        }
+                    val alert = builder.create()
+                    alert.show()
                 })
                 recyclerView.adapter = pdfAdapter
                 recyclerView.layoutManager = LinearLayoutManager(applicationContext)

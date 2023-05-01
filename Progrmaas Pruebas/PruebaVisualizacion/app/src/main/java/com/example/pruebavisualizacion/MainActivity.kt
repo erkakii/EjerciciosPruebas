@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             .build()
 
         //Url de donde se encuntra el pdf que vamos a descargar es uno random que encontre por internet
-        val url = "https://campuscreativo.cl/wp-content/uploads/2020/03/random-on-line.pdf"
+        val url = "https://firebasestorage.googleapis.com/v0/b/etickets-79fb1.appspot.com/o/An%C3%A1lisis%20Juegos%20(1).pdf?alt=media&token=29b0b129-7008-495c-b7eb-c90910062b04"
         DownloadPdfTask(object : DownloadPdfTask.DownloadPdfListener {
             override fun onDownloadComplete(pdfBytes: ByteArray) {
                 // El pdf se descarga y el array de bytes lo convertmos en un string de base 64
@@ -46,8 +46,8 @@ class MainActivity : AppCompatActivity() {
                 val servicioAPI = retrofit.create(ServicioAPI::class.java)
                 //Creamos el objeto pdf con el que vamos a enviar los datos a la base de datos
                 val pdf = Pdfs(
-                    titulo = "Mercadona",
-                    contenido = pdfBase64,
+                    titulo = "Zara",
+                    contenidoPDF = pdfBase64,
                     emailUser = "elminikaki@gmail.com",
                 )
 
