@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group>
+        <item
+            android:id="@+id/menu_item_Inicio"
+            android:title="@string/inicio"
+            android:icon="@drawable/inicio"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/menu_item_Escaner"
+            android:icon="@drawable/escanear"
+            android:title="@string/esc_ner"
+            app:showAsAction="never" />
+    </group>
+
+    <item android:title="@string/aplicaci_n">
+        <menu>
+            <item
+                android:id="@+id/menu_item_ayuda"
+                android:icon="@drawable/soporte"
+                android:title="@string/ayuda_y_soporte"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/menu_item_cerrarSesion"
+                android:icon="@drawable/cerrarsesion"
+                android:title="@string/cerrar_sesi_n"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+</menu>

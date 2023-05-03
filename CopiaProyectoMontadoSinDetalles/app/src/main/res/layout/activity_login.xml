@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A42196F3"
+    android:backgroundTint="#A42196F3"
+    tools:context=".LoginActivity"
+    android:theme="@style/Theme.AppCompat.NoActionBar">
+
+    <TextView
+        android:id="@+id/txtTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/e_tickets"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.063" />
+
+    <EditText
+        android:id="@+id/etyEmailLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="@string/e_tickets_example_com"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.033" />
+
+    <EditText
+        android:id="@+id/etyPasswordLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgErrorLogin1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="@string/login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgErrorLogin2"
+        app:layout_constraintVertical_bias="0.388" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="137dp"
+        android:layout_height="203dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTittle"
+        app:layout_constraintVertical_bias="0.004"
+        app:srcCompat="@drawable/qr" />
+
+    <ImageView
+        android:id="@+id/imgErrorLogin1"
+        android:layout_width="23dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etyEmailLogin"
+        app:layout_constraintVertical_bias="0.007"
+        app:srcCompat="@drawable/error" />
+
+    <ImageView
+        android:id="@+id/imgErrorLogin2"
+        android:layout_width="26dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.259"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etyPasswordLogin"
+        app:layout_constraintVertical_bias="0.005"
+        app:srcCompat="@drawable/error" />
+
+    <TextView
+        android:id="@+id/txtErrorLoginEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:shadowColor="@color/black"
+        android:text="@string/este_campo_es_obligatorio"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/etyPasswordLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toEndOf="@+id/imgErrorLogin1"
+        app:layout_constraintTop_toBottomOf="@+id/etyEmailLogin"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <TextView
+        android:id="@+id/txtErrorLoginEmail2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:shadowColor="@color/black"
+        android:text="@string/este_campo_es_obligatorio"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toEndOf="@+id/imgErrorLogin2"
+        app:layout_constraintTop_toBottomOf="@+id/etyPasswordLogin"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <TextView
+        android:id="@+id/txtRegistrarse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/a_n_no_tienes_una_cuenta"
+        android:textColor="#015EFF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:layout_constraintVertical_bias="0.172" />
+
+    <TextView
+        android:id="@+id/txtOlvidarPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/he_olvidado_mi_contrase_a"
+        android:textColor="#015EFF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtRegistrarse"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:layout_constraintVertical_bias="0.165" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="47dp"
+        android:layout_height="43dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgErrorLogin2"
+        app:layout_constraintEnd_toStartOf="@+id/etyPasswordLogin"
+        app:layout_constraintHorizontal_bias="0.706"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgErrorLogin1"
+        app:srcCompat="@drawable/bloquear" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="47dp"
+        android:layout_height="43dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgErrorLogin1"
+        app:layout_constraintEnd_toStartOf="@+id/etyEmailLogin"
+        app:layout_constraintHorizontal_bias="0.706"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.615"
+        app:srcCompat="@drawable/user" />
+
+    <ImageView
+        android:id="@+id/imgPeligro"
+        android:layout_width="26dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="100dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        app:layout_constraintEnd_toStartOf="@+id/txtPeligro"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etyPasswordLogin"
+        app:layout_constraintVertical_bias="0.782"
+        app:srcCompat="@drawable/peligro" />
+
+    <TextView
+        android:id="@+id/txtPeligro"
+        android:layout_width="163dp"
+        android:layout_height="21dp"
+        android:text="Debes verificar tu correo"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etyPasswordLogin"
+        app:layout_constraintVertical_bias="0.779" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

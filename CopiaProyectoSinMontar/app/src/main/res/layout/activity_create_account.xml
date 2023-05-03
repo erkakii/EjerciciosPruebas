@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A42196F3"
+    android:backgroundTint="#A42196F3"
+    tools:context=".CreateAccountActivity"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <TextView
+        android:id="@+id/txtErrorNulosCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:shadowColor="@color/black"
+        android:text="Todos los campos son obligatorios"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistrarse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toEndOf="@+id/imgErrorNulls"
+        app:layout_constraintTop_toBottomOf="@+id/txtPasswordConfirm"
+        app:layout_constraintVertical_bias="0.565" />
+
+    <TextView
+        android:id="@+id/createAcountTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear Cuenta"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="211dp"
+        android:layout_height="169dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createAcountTittle"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/identificacion" />
+
+    <EditText
+        android:id="@+id/txtEmailCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/e_tickets_example_com"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.076" />
+
+    <EditText
+        android:id="@+id/txtNombreCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmailCreate"
+        app:layout_constraintVertical_bias="0.108" />
+
+    <EditText
+        android:id="@+id/txtpasswordCretate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreCreate"
+        app:layout_constraintVertical_bias="0.108" />
+
+    <EditText
+        android:id="@+id/txtPasswordConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Confrim password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtpasswordCretate"
+        app:layout_constraintVertical_bias="0.162" />
+
+    <Button
+        android:id="@+id/btnRegistrarse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="Registrarse"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPasswordConfirm"
+        app:layout_constraintVertical_bias="0.506" />
+
+    <ImageView
+        android:id="@+id/imgErrorNulls"
+        android:layout_width="23sp"
+        android:layout_height="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistrarse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPasswordConfirm"
+        app:layout_constraintVertical_bias="0.59"
+        app:srcCompat="@drawable/error" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="47dp"
+        android:layout_height="43dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtNombreCreate"
+        app:layout_constraintEnd_toStartOf="@+id/txtEmailCreate"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.449"
+        app:srcCompat="@drawable/user" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="47dp"
+        android:layout_height="43dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtpasswordCretate"
+        app:layout_constraintEnd_toStartOf="@+id/txtNombreCreate"
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmailCreate"
+        app:layout_constraintVertical_bias="0.59"
+        app:srcCompat="@drawable/nombre" />
+
+    <ImageView
+        android:id="@+id/imgcandado"
+        android:layout_width="47dp"
+        android:layout_height="43dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtPasswordConfirm"
+        app:layout_constraintEnd_toStartOf="@+id/txtpasswordCretate"
+        app:layout_constraintHorizontal_bias="0.584"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreCreate"
+        app:srcCompat="@drawable/bloquear" />
+
+    <ImageView
+        android:id="@+id/imgCandadoConfirmado"
+        android:layout_width="47dp"
+        android:layout_height="43dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgErrorNulls"
+        app:layout_constraintEnd_toStartOf="@+id/txtPasswordConfirm"
+        app:layout_constraintHorizontal_bias="0.584"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtpasswordCretate"
+        app:layout_constraintVertical_bias="0.607"
+        app:srcCompat="@drawable/verificado" />
+
+    <ImageView
+        android:id="@+id/imgErrorPass"
+        android:layout_width="47sp"
+        android:layout_height="43sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/txtPasswordConfirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toEndOf="@+id/txtpasswordCretate"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreCreate"
+        app:srcCompat="@drawable/error" />
+
+    <ImageView
+        android:id="@+id/imgErrorConfirm"
+        android:layout_width="47sp"
+        android:layout_height="43sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/txtErrorNulosCreate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtPasswordConfirm"
+        app:layout_constraintTop_toBottomOf="@+id/txtpasswordCretate"
+        app:srcCompat="@drawable/error" />
+</androidx.constraintlayout.widget.ConstraintLayout>
