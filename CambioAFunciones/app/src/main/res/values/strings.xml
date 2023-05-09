@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">eTickets</string>
+    <string name="a_n_no_tienes_una_cuenta"><u>¿Aún no tienes una cuenta?</u></string>
+    <string name="he_olvidado_mi_contrase_a"><u>He olvidado mi contraseña</u></string>
+    <string name="este_campo_es_obligatorio">Este campo es obligatorio</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="e_tickets_example_com">e-Tickets@example.com</string>
+    <string name="e_tickets">e-Tickets</string>
+    <string name="navigation_drawer_open">NavigationDrawerCodelia</string>
+    <string name="navigation_drawer_close">NavigationDrawerCodelia</string>
+    <string name="inicio">Inicio</string>
+    <string name="esc_ner">Escáner</string>
+    <string name="aplicaci_n">Aplicación</string>
+    <string name="ayuda_y_soporte">Ayuda y Soporte</string>
+    <string name="cerrar_sesi_n">Cerrar Sesión</string>
+
+</resources>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "426152938896",
+    "project_id": "etickets-79fb1",
+    "storage_bucket": "etickets-79fb1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:426152938896:android:6d1306a616839f7bbcf715",
+        "android_client_info": {
+          "package_name": "com.example.eticklets"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "426152938896-2srjcpeovaubdr71djh3387s92aqcu6h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.eticklets",
+            "certificate_hash": "2c4b0de5156d71f34b8152a1ecdbb4abfa9c9ec4"
+          }
+        },
+        {
+          "client_id": "426152938896-0r93eicvromjomvbaoo4ma7o5vpbmvtj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5S9JWQCDH9G6HiBR4YSGwhbxYmr2fbQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "426152938896-0r93eicvromjomvbaoo4ma7o5vpbmvtj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
